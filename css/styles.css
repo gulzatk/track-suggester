@@ -2,6 +2,9 @@ img {
   width: 400px;
   height: 220px;
 }
-.result{
+#c-sharp, #CSS, #Ruby {
+  display:none;
+}
+.anyone {
   display:none;
 }
