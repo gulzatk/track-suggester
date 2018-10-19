@@ -9,27 +9,20 @@
 </head>
 <body>
   <div class="container">
-    <img src="img/epicodus.png" alt="Picture of Epicodus.">
-    <h1>Track suggester for Epicodus!</h1>
-
-    <p>We will provide a track suggestion  based on your answers. Please take the short quiz below. </p>
+    <div class="jumbotron">
+      <img src="img/epicodus.png" alt="Picture of Epicodus.">
+      <h1>Track suggester for Epicodus!</h1>
+      <p>We will provide a track suggestion  based on your answers. Please take the short quiz below. </p>
+    </div>
     <form id="survey">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name"  class="form-control" type="text">
-      </div>
+
+      <label for="name">Name</label>
+      <input id="name" type="text">
 
       <div class="form-group">
-        <label for="subject">What is your favorite subject?</label>
-        <select id="subject" class="form-control" type="text">
-          <option value="math">Math</option>
-          <option value="art">Art</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="learn">What would you most like to learn?</label>
-        <select id="learn" class="form-control" type="text">
+        <label for="question1">What would you most like to learn?</label>
+        <select id="question1" class="form-control" type="text">
+          <option value=""></option>
           <option value="programmingLanguage">Programming languages</option>
           <option value="web-applications">To build interactive applications</option>
           <option value="web-pages">To creat a beautiful web pages</option>
@@ -37,57 +30,79 @@
       </div>
 
       <div class="form-group">
-        <label for="logic">would you like to work with front-end or back-end logic??</label>
-        <select id="logic" class="form-control" type="text">
-          <option value="bach-end">Back-end</option>
+        <label for="question2">would you like to work with front-end or back-end logic??</label>
+        <select id="question2" class="form-control" type="text">
+          <option value=""></option>
+          <option value="back-end">Back-end</option>
           <option value="front-end">Front-end</option>
         </select>
-      </form>
-    </div>
-
-    <div class="form-group">
-      <label for="company">Do you want to work on a start up or established company?</label>
-      <select id="company" class="form-control" type="text">
-        <option value="start -up">Start-up</option>
-        <option value="estableshed">Established company</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="language">What language do you like to learn?</label>
-      <select id="language" class="form-control" type="text">
-        <option value="C#/.NET">C#/.NET</option>
-        <option value="Ruby/Rails">Ruby/Rails</option>
-        <option value="CSS/Design">CSS/Design</option>
-        <option value="PHP/Drupal">PHP/Drupal</option>
-      </select>
-      <br>
-      <button type="submit" id="survey1" class="btn btn-info">Submit</button>
-    </div>
-  </form>
-
-
-  <div class="tracks">
-
-    <div id="C#/.NET">
-      <p>Hey <span id="name"></span><a href="https://www.epicodus.com/c-sharp">
-        C#</a> is best language for you to learn at Epicodus.</p>
-        <img src="img/c-net.png" alt="Picture of C#/.NET">
       </div>
 
-      <div id="Ruby/Rails">
-        <p>Hey <span id="name"></span><a href="https://www.epicodus.com/ruby">
-          Java</a> is best language for you to learn at Epicodus.</p>
-          <img src="img/ruby.jpg" alt="Picture of Ruby/Rails">
+      <div class="form-group">
+        <label for="question3">Which of the following is most important to you?</label>
+        <select id="question3" class="form-control" type="text">
+          <option value=""></option>
+          <option value="1">In-demand language</option>
+          <option value="2">Making content interactive and dinamic</option>
+          <option value="3">Employment opportunity</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="question4">Do you want to work on a start up or established company?</label>
+        <select id="question4" class="form-control" type="text">
+          <option value=""></option>
+          <option value="start-up">Start-up</option>
+          <option value="estableshed">Established company</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="question5">What language do you like to learn?</label>
+        <select id="question5" class="form-control" type="text">
+          <option value=""></option>
+          <option value="c-sharp">C#/.NET</option>
+          <option value="Ruby">Ruby/Rails</option>
+          <option value="CSS">CSS/Design</option>
+          <option value="PHP">PHP/Drupal</option>
+        </select>
+        <br>
+      </div>
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+
+
+    <div class="result">
+
+      <div id="c-sharp/.NET">
+        <p>Hey <span id="name"></span><a href="https://www.epicodus.com/c-sharp">
+          C#</a> is best language for you to learn at Epicodus.</p>
+          <img src="img/c-net.png" alt="Picture of C#/.NET">
         </div>
 
-        <div id="CSS/Design">
-          <p>Hey <span id="name"></span><a href="https://www.epicodus.com/css">
-            CSS</a> and <a href="https://www.epicodus.com/design">
-              Design</a> classes are best for you to take at Epicodus.</p>
-              <img src="img/css.jpg" alt="Picture of CSS/Design">
-            </div>
+        <div id="Ruby/Rails">
+          <p>Hey <span class="name"></span><a href="https://www.epicodus.com/ruby">
+            Java</a> is best language for you to learn at Epicodus.</p>
+            <img src="img/ruby.jpg" alt="Picture of Ruby/Rails">
           </div>
-        </div>
-      </body>
-      </html>
+
+          <div id="CSS/Design">
+            <p>Hey <span id="name"></span><a href="https://www.epicodus.com/css">
+              CSS</a> and <a href="https://www.epicodus.com/design">
+                Design</a> classes are best for you to take at Epicodus.</p>
+                <img src="img/css.jpg" alt="Picture of CSS/Design">
+
+                <div class="anyone">
+                  <p> Hey <span class="name"></span>you can choose any of this classes</p>
+                  <a href="https://www.epicodus.com/design">
+                    <img src="img/css.jpg" alt="Picture of CSS/Design">
+                    <a href="https://www.epicodus.com/ruby">
+                      <img src="img/ruby.jpg" alt="Picture of Ruby/Rails">
+                      <a href="https://www.epicodus.com/c-sharp">
+                        <img src="img/c-net.png" alt="Picture of C#/.NET">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+              </html>

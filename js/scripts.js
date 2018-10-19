@@ -3,23 +3,24 @@ $(document).ready(function() {
     event.preventDefault();
 
     var name = $("input#name").val();
-    var subject =$ ("#subject");
-    var learn = $("#learn");
-    var company = $("#company");
-    var languge = $("#languge");
-    var logic = $("#ligic");
-
+    var question1 =$ ("#question1");
+    var question2 = $("#question2");
+    var question3 = $("#question3");
+    var question4 = $("#question4");
+    var question5 = $("#question5");
 
 $(".name").text(name);
 
-    if (subject === "math" && logic === "back-end" ||learn === "programmingLanguge" && company === "established") {
-      $("#C#/.NET").show();
+    if (question1 === "programmingLanguage" && question2 === "back-end" && question3 === "1" && question4 === "established" && question5 === "c-sharp") {
+      $("#c-sharp/.NET").show();
     }
-    else if (subject === "art" && logic === "front-end" || learn === "web-pages" && languge === "CSS/Design") {
+    else if (question1 === "web-pages" && question2 === "front-end" && question3 === "3" && question4 === "start-up" && question5 === "CSS") {
       $("#CSS/Design").show();
     }
-    else if (learn === "web-application" && logic === "back-end" || company === "start-up" &&  languge === "Ruby/Rails") {
+    else if (question1 === "web-application" && question2 === "back-end" && question3 === "2" &&  question4 === "established" && question5 === "Ruby") {
       $("#Ruby/Rails").show();
+    } else {
+      $(".anyone").show()
     }
   });
 });
