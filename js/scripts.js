@@ -20,7 +20,6 @@ $(".name").text(name);
     }
     else if (learn === "web-application" && logic === "back-end" || company === "start-up" &&  languge === "Ruby/Rails") {
       $("#Ruby/Rails").show();
-    }  else
     }
   });
 });
