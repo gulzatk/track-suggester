@@ -9,18 +9,22 @@ $(document).ready(function() {
     var question4 = $("#question4").val();
     var question5 = $("#question5").val();
 
-$(".name").text(name);
+    $(".name").text(name);
 
-    if (question1 === "programmingLanguage" && question2 === "back-end" && question3 === "1" && question4 === "established" && question5 === "c-sharp") {
-      $("#c-sharp").show();
+    if (question1 === "programmingLanguage" && question2 === "csharp" && question3 === "back-end") {
+      $("#csharp").show();
+      $("#css").hide();
+      $("#ruby").hide();
     }
-    else if (question1 === "web-pages" && question2 === "front-end" && question3 === "3" && question4 === "start-up" && question5 === "CSS") {
-      $("#CSS").show();
+    else if (question1 === "web-pages" && question3 === "front-end") {
+      $("#csharp").hide();
+      $("#css").show();
+      $("#ruby").hide();
     }
-    else if (question1 === "web-application" && question2 === "back-end" && question3 === "2" &&  question4 === "established" && question5 === "Ruby") {
-      $("#Ruby").show();
-    } else {
-      $(".anyone").show()
+    else {
+      $("#csharp").hide();
+      $("#css").hide();
+      $("#ruby").show();
     }
   });
 });
